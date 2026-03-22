@@ -1,0 +1,36 @@
+{
+  "dataset_title": "Synthetic Crypto Transactions",
+  "version": "1.0",
+  "description": "High-frequency synthetic trade data for internal testing.",
+  "columns": [
+    {
+      "name": "transaction_id",
+      "data_type": "string (UUID)",
+      "description": "Primary key. Unique identifier for the full trade lifecycle (bid to sell).",
+      "constraints": { "unique": true, "nullable": false }
+    },
+    {
+      "name": "symbol",
+      "data_type": "string",
+      "description": "The ticker symbol of the asset.",
+      "example": "BTC, ETH, KQA"
+    },
+    {
+      "name": "bid_price",
+      "data_type": "float",
+      "unit": "USD",
+      "description": "The execution price at which the asset was purchased."
+    },
+    {
+      "name": "bid_time",
+      "data_type": "float (Unix Epoch)",
+      "description": "Timestamp of the initial purchase order execution."
+    },
+    {
+      "name": "sell_order_settle_time",
+      "data_type": "float (Unix Epoch)",
+      "description": "The final timestamp when the transaction was fully cleared and settled by the exchange.",
+      "business_rule": "Expected to be bid_time + 1s (trade) + delta (settlement delay)."
+    }
+  ]
+}
