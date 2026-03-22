@@ -3,7 +3,7 @@
 ## 📊 Overview
 This project features a Business Intelligence (BI) dashboard built with Streamlit and Pandas to analyze a dataset of synthesized cryptocurrency transactions. The interactive web application provides key insights into trading frequencies, overall capitalization/spend, and recent trade activities.
 
-> *[Insert Screenshot Here: Full-page view of the Dashboard displaying the top banner and introductory data reference date]*
+<img width="1902" height="987" alt="image" src="https://github.com/user-attachments/assets/137c1586-761d-4de4-bb91-26ec6ec68e5b" />
 
 ---
 
